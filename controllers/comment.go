@@ -59,7 +59,7 @@ func (this *CommentController) List() {
 			commentInfo.PraiseCount = v.PraiseCount
 			commentInfo.EpisodesId = v.EpisodesId
 			//获取用户信息
-			commentInfo.UserInfo, _ = models.GetUserInfo(v.UserId)
+			commentInfo.UserInfo, _ = models.RedisGetUserInfo(v.UserId)
 			data = append(data, commentInfo)
 		}
 		this.Data["json"] = ReturnSuccess(0, "success", data, num)
