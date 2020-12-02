@@ -9,4 +9,5 @@ require (
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/gorilla/websocket v1.4.2
 	github.com/smartystreets/goconvey v1.6.4
+	github.com/streadway/amqp v1.0.0
 )
